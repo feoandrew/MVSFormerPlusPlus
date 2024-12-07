@@ -254,7 +254,7 @@ class DTUMVSDataset(Dataset):
         for i, vid in enumerate(view_ids):
             # NOTE that the id in image file names is from 1 to 49 (not 0~48)
             # NOTE that DTU_origin/Rectified saves the images with the original size (1200x1600)
-            img_filename = os.path.join(self.datapath, 'DTU_origin/Rectified/{}/rect_{:0>3}_{}_r5000.png'.format(scan, vid + 1, light_idx))
+            img_filename = os.path.join(self.datapath, '/Rectified/{}/rect_{:0>3}_{}_r5000.png'.format(scan, vid + 1, light_idx))
             mask_filename_hr = os.path.join(self.datapath, 'Depths_raw/{}/depth_visual_{:0>4}.png'.format(scan, vid))
             depth_filename_hr = os.path.join(self.datapath, 'Depths_raw/{}/depth_map_{:0>4}.pfm'.format(scan, vid))
             # these poses are based on original resolution

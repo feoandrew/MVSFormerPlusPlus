@@ -178,8 +178,8 @@ class MVSDataset(Dataset):
                     proj_mat_filename = os.path.join(self.datapath, '{}/cams/{:0>8}_cam.txt'.format(scan, vid))
 
             if self.kwargs["dataset"] == 'dtu':  # only used for metric
-                mask_filename_hr = os.path.join("/".join(self.datapath.split('/')[:-1]), 'mvs_training/Depths_raw/{}/depth_visual_{:0>4}.png'.format(scan, vid))
-                depth_filename_hr = os.path.join("/".join(self.datapath.split('/')[:-1]), 'mvs_training/Depths_raw/{}/depth_map_{:0>4}.pfm'.format(scan, vid))
+                mask_filename_hr = os.path.join("/".join(self.datapath.split('/')[:-2]), 'dtu-train/dtu/Depths_raw/{}/depth_visual_{:0>4}.png'.format(scan, vid))
+                depth_filename_hr = os.path.join("/".join(self.datapath.split('/')[:-2]), 'dtu-train/dtu/Depths_raw/{}/depth_map_{:0>4}.pfm'.format(scan, vid))
 
             img = self.read_img(img_filename)
             img = np.array(img)

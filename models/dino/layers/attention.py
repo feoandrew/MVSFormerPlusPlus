@@ -30,7 +30,7 @@ except ImportError:
 try:
     from flash_attn import flash_attn_qkvpacked_func, flash_attn_func
 
-    FLASH_AVAILABLE = True
+    FLASH_AVAILABLE = False
 except ImportError:
     logger.warning("FLASH ATTENTION2 not available")
     FLASH_AVAILABLE = False
